@@ -1,0 +1,17 @@
+Функция input() автоматически удаляет символ перевода строки, а при работе с readline() нужно удалять его вручную. 
+Для этого применяют метод rstrip(), который удаляет все пробелы и переводы строк в конце полученной строки.
+Есть аналогичные методы: 
+lstrip() удаляет пробелы и переводы строки слева, в начале строки;
+strip() удаляет пробелы и переводы строк с обеих сторон.
+
+
+import sys
+
+elements_count = int(sys.stdin.readline().rstrip())
+
+data = [None] * elements_count
+
+for index in range(elements_count):
+    data[index] = sys.stdin.readline().rstrip()
+
+print(data) 
